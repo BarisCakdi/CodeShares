@@ -1,0 +1,31 @@
+﻿@model List<Code>
+@{
+    ViewBag.BodyClass = "index-page";
+}
+
+@if (TempData["mesaj"] != null)
+{
+    <div class="alert alert-success text-center rounded-pill alert-custom" role="alert">
+        <strong>@TempData["mesaj"]</strong>
+    </div>
+}
+
+<div class="card-container mt-5">
+    @foreach (var codes in Model)
+    {
+        <div class="card">
+            <h3 class="card-title">@codes.Name</h3>
+            <div class="card-content">
+                @codes.Description 
+            </div>
+            <p class="card-date">@codes.Created</p>
+        </div>
+    }
+</div>
+
+
+@section Scripts{
+    <script>
+        $('.alert').delay(1500).fadeOut();
+    </script>
+}

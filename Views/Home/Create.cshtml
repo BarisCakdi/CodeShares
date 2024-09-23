@@ -1,0 +1,19 @@
+﻿<form class="was-validated mt-5" method="post" action="/home/add">
+    <div class="mb-3">
+        <label for="validationTitle" class="form-label">Başlık</label>
+        <input class="form-control dark-bg" id="validationTitle" name="Name" placeholder="Başlık" required>
+        <div class="invalid-feedback">
+            Kod başlığı giriniz!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="validationTextarea" class="form-label">Kod Kayıt</label>
+        <textarea class="form-control dark-bg" rows="6" id="validationTextarea" name="Description" placeholder="Kayıt edilecek veri" required></textarea>
+        <div class="invalid-feedback">
+            Kayıt altına almak istediğiniz kod'u yazınız.
+        </div>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Kayıt</button>
+    </div>
+</form>

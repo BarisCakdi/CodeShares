@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.BodyClass = "login-page";
+}
+
+<main>
+    <section class="hero-section d-flex justify-content-center align-items-center">
+        <div class="container position-relative z-index-1">
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-lg-5 col-12">
+                    @if (TempData["error"] != null)
+                    {
+                        <div class="alert alert-danger text-center rounded-pill alert-custom" role="alert">
+                            <strong>@TempData["error"]</strong>
+                        </div>
+                    }
+                    <form class="custom-form login-form" role="form" method="post" autocomplete="off">
+                        <h2 class="hero-title text-center mb-4">Giriş Kodu</h2>
+                        <div class="form-floating">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+                            <label for="password"></label>
+                        </div>
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-lg-5 col-12">
+                                <button type="submit" class="form-control btn btn-primary">Giriş</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="video-wrap position-absolute w-100 h-100 z-index-0">
+            <video autoplay loop muted>
+                <source src="~/login/videos/video.mp4" type="video/mp4">
+                Tarayıcınız bu video etiketini desteklemiyor.
+            </video>
+        </div>
+    </section>
+</main>
+@section Scripts {
+    <script>
+        $('.alert').delay(2500).fadeOut();
+    </script>
+}
