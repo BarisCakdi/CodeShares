@@ -9,7 +9,7 @@ namespace CodeShares.Controllers
     {
         private readonly AppDbContext _context;
 
-        private const string AdminPassword = "KimseBilemez";
+        private const string AdminPassword = "";
 
         public HomeController(AppDbContext context)
         {
